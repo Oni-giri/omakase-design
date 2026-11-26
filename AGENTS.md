@@ -82,6 +82,8 @@ Look at `docs/screenshots/` first to see the target, then read this file. `docs/
 
 ## 7. Before you finish, check
 
+Run `node scripts/check.mjs src` (from an installed copy: `node omakase/scripts/check.mjs src`). It flags pills, grey fills, dark blocks, side sheets, gradients, hard-coded colours and emoji. Then:
+
 1. No element looks like a pill/badge/tag. Search your code for `rounded-full`, `badge`, `chip`, `pill`, `tag`.
 2. Exactly one primary (ultramarine) button per view.
 3. No grey strip or grey selected state; no side sheet; no dark block besides toast/bulk bar.

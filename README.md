@@ -4,7 +4,13 @@
 
 ![List page](docs/screenshots/list-page.png)
 
-**Building with an AI agent?** Point it at [`AGENTS.md`](AGENTS.md): install steps, the rules, a "I need… → use" table and a checklist.
+**Building with an AI agent?** Drop the skill into your project:
+
+```bash
+git clone --depth 1 https://github.com/Oni-giri/omakase-design /tmp/omakase && mkdir -p .claude/skills && cp -R /tmp/omakase/skill/omakase .claude/skills/
+```
+
+The agent then installs the system on its first UI task (`skill/omakase/install.sh`), wires it for the project's stack, reads [`AGENTS.md`](AGENTS.md) and runs the style check before finishing. For agents without skills, point them at `AGENTS.md` directly.
 
 ## What's inside
 
@@ -21,6 +27,8 @@
 | `icons/`, `logos/` | Stroke icons on a 16px grid; Holdout's logo as an example. |
 | `docs/` | Principles, component catalogue, page patterns, screenshots. |
 | `scripts/build.mjs` | Regenerates the generated files (`node scripts/build.mjs`, no dependencies). |
+| `scripts/check.mjs` | Style check for an app's code: pills, grey fills, side sheets, hard-coded colours… |
+| `skill/omakase/` | Drop-in agent skill: `SKILL.md` and `install.sh`. |
 
 ## Quick start
 

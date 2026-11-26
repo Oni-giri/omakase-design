@@ -1,0 +1,41 @@
+---
+name: omakase
+description: Use for any web UI work in this project (new pages, components, restyling, reviewing UI). Installs the Omakase design system (light, quiet, drawn glyphs and ratio bars, never pills) from github.com/Oni-giri/omakase-design and follows its rules.
+---
+
+# Omakase
+
+This project's UI follows the Omakase design system. "The chef chooses": the design decisions are made; your job is to apply them, not to redesign.
+
+## 1. Make sure it is installed
+
+Look for an `omakase/` folder (usually `src/omakase/` or `./omakase/`) containing `AGENTS.md` and `VERSION`.
+
+- Missing: run `bash <this skill's folder>/install.sh` from the project root (pass a target folder as the first argument to choose where it goes). It clones the repo, copies the CSS, tokens, icons, docs, the style check and, if the project uses React, the React components, and records the commit in `VERSION`.
+- Present and the user asked to update the design system: run the same script; it replaces that folder only.
+- No network or git: tell the user, and ask them to run the script themselves or to add the folder by hand.
+
+## 2. Wire it up once
+
+Follow section 1 of `omakase/AGENTS.md` for the stack the script reported:
+
+- React: import `omakase/css/omakase.css` once in the entry file and wrap the app in `<AppRoot>` from `omakase/react`.
+- Plain HTML or another framework: link `omakase/css/omakase.css` and put `class="om-app om-canvas"` on `<body>`.
+- Tailwind v3: add `presets: [require('./<path>/omakase/tokens/tailwind.preset.cjs')]`. Tailwind v4: import `omakase/tokens/tailwind-v4.css` after `omakase/css/omakase.css`.
+
+Do not copy token values into the app's own CSS; always reference the variables.
+
+## 3. Before building any screen
+
+1. Look at the images in `omakase/docs/screenshots/`: that is the target look and density.
+2. Read `omakase/AGENTS.md` fully: the "Never" list, the "I need… → use" table, the words rules.
+3. Find the matching recipe in `omakase/docs/patterns.md` (list, detail, settings, dashboard, phone) and the components in `omakase/docs/components.md`.
+
+Prefer existing components. If something is missing, build it from the same tokens and classes, keep the `om-` look, and mention it in your summary so it can be added to the system.
+
+## 4. Before you finish
+
+1. Run `node omakase/scripts/check.mjs src` (or the folders that hold UI code). Fix every hit, or mark a line that is genuinely fine with an `omakase-ignore` comment and say why.
+2. Go through the checklist in section 7 of `omakase/AGENTS.md`.
+3. If you can run the app and take a screenshot, compare it with `omakase/docs/screenshots/`.
+4. In your summary, list anything where a request forced you to break a rule, and which rule.
