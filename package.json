@@ -1,9 +1,9 @@
 {
   "name": "omakase-design",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Omakase: an opinionated, light and quiet design system for web apps. Tokens, CSS, React components and agent instructions.",
   "type": "module",
-  "files": ["css", "tokens", "react", "icons", "logos", "AGENTS.md", "docs"],
+  "files": ["css", "tokens", "react", "icons", "logos", "AGENTS.md", "CHANGELOG.md", "docs"],
   "exports": {
     "./css": "./css/omakase.css",
     "./tokens.css": "./tokens/tokens.css",

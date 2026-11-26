@@ -104,6 +104,10 @@ Run `node scripts/check.mjs src` (from an installed copy: `node omakase/scripts/
 7. Compare your screen with `docs/screenshots/`: same calm density, white cards on the bloomed canvas.
 8. Switch `data-theme` to `dark` and look again: nothing should disappear (icons, borders, marks).
 
-## 8. Extending
+## 8. Versions and updates
+
+Releases are tagged `vX.Y.Z`; `CHANGELOG.md` lists each one with **Upgrade steps** for app code. An installed copy records its version in `omakase/VERSION`. To update an app, re-run the installer (it fetches the latest release), then apply the Upgrade steps of every newer version, oldest first.
+
+## 9. Extending
 
 New component: add its CSS to `css/components.css` with the `om-` prefix and token variables only, run `node scripts/build.mjs`, add a typed wrapper in `react/components/`, export it from `react/index.ts`, and document it in `docs/components.md` (what it replaces, when to use it). Keep it consistent with sections 2 and 3. If a request conflicts with these rules, follow the request but say which rule it breaks.

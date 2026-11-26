@@ -3,7 +3,7 @@
 ## v0.1 (done)
 Tokens, `omakase.css`, about 40 React components, agent instructions, a drop-in agent skill with an installer and a style check, examples for a list and a detail page.
 
-## v0.2 (now)
+## v0.2 (now, 0.2.1)
 Dark theme, comfortable density, label shapes so meaning never rests on colour alone, inline icons, catalogue components (tile, code block, sparkline, search, top bar, prose) from the Brewhunt field test.
 
 ## v0.3: covering more of a typical web app

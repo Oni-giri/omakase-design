@@ -31,6 +31,12 @@ The agent then installs the system on its first UI task (`skill/omakase/install.
 | `scripts/check.mjs` | Style check for an app's code: pills, grey fills, side sheets, hard-coded colours… |
 | `skill/omakase/` | Drop-in agent skill: `SKILL.md` and `install.sh`. |
 
+## Versions
+
+Releases are git tags (`v0.2.1`, …). [`CHANGELOG.md`](CHANGELOG.md) lists what changed in each, with **Upgrade steps** an agent applies to an app. To update an app built with Omakase, tell its agent: *"Update Omakase to the latest version."* With the skill installed, it re-runs the installer, reads the changelog from the app's `omakase/VERSION` onwards and applies the steps.
+
+Releasing a new version: add an entry at the top of `CHANGELOG.md` (with Upgrade steps), bump `version` in `package.json`, run `node scripts/build.mjs`, commit, then `git tag vX.Y.Z && git push --tags`.
+
 ## Quick start
 
 Plain HTML:

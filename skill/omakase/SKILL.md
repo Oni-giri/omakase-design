@@ -12,8 +12,16 @@ This project's UI follows the Omakase design system. "The chef chooses": the des
 Look for an `omakase/` folder (usually `src/omakase/` or `./omakase/`) containing `AGENTS.md` and `VERSION`.
 
 - Missing: run `bash <this skill's folder>/install.sh` from the project root (pass a target folder as the first argument to choose where it goes). It clones the repo, copies the CSS, tokens, icons, docs, the style check and, if the project uses React, the React components, and records the commit in `VERSION`.
-- Present and the user asked to update the design system: run the same script; it replaces that folder only.
+- Present and the user asks to update the design system (or the UI to "the latest Omakase"): follow "Updating" below.
 - No network or git: tell the user, and ask them to run the script themselves or to add the folder by hand.
+
+## Updating
+
+1. Note the current version: first word of `omakase/VERSION`.
+2. Run `bash <this skill's folder>/install.sh` (same target folder). It installs the latest release and prints the old and new versions.
+3. Open `omakase/CHANGELOG.md`. For every version newer than the old one, oldest first, apply its **Upgrade steps** to the app's code. Patch releases usually need nothing.
+4. Run `node omakase/scripts/check.mjs src`, fix what it finds, and look at the app (both themes if it offers dark).
+5. Tell the user: old → new version, what changed for them, which upgrade steps you applied, anything you skipped and why.
 
 ## 2. Wire it up once
 
