@@ -1,0 +1,25 @@
+{
+  "name": "omakase-design",
+  "version": "0.1.0",
+  "description": "Omakase: an opinionated, light and quiet design system for web apps. Tokens, CSS, React components and agent instructions.",
+  "type": "module",
+  "files": ["css", "tokens", "react", "icons", "logos", "AGENTS.md", "docs"],
+  "exports": {
+    "./css": "./css/omakase.css",
+    "./tokens.css": "./tokens/tokens.css",
+    "./tokens.json": "./tokens/tokens.json",
+    "./tailwind": "./tokens/tailwind.preset.cjs",
+    "./tailwind-v4": "./tokens/tailwind-v4.css",
+    "./react": "./react/index.ts",
+    "./icons/*": "./icons/*"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true }
+  }
+}

@@ -1,0 +1,99 @@
+/* Omakase — generated from tokens/tokens.json by scripts/build.mjs. Do not edit by hand. */
+:root {
+  --canvas: #F7F8FC;
+  --surface: #FFFFFF;
+  --surface-sunken: #FAFAFB;
+  --glass: rgba(255,255,255,0.58);
+  --line: #E7E7EB;
+  --line-soft: #EEEEF1;
+  --line-strong: #DCDCE2;
+  --ink: #18181B;
+  --ink-2: #3F3F46;
+  --ink-muted: #52525B;
+  --ink-subtle: #6B6B75;
+  --accent: #3B5BFD;
+  --accent-strong: #2A48E8;
+  --accent-tint: #EEF2FF;
+  --accent-wash: #F5F7FF;
+  --on-accent: #FFFFFF;
+  --bloom-sky: #7DD3FC;
+  --bloom-pink: #F9A8D4;
+  --bloom-sun: #FDE047;
+  --bloom-mint: #6EE7B7;
+  --status-spec: #94A3B8;
+  --status-open: #CBD5E1;
+  --status-progress: #3B82F6;
+  --status-review: #F59E0B;
+  --status-returned: #F43F5E;
+  --status-done: #10B981;
+  --ratio-pass: #10B981;
+  --ratio-fail: #F43F5E;
+  --ratio-sealed: #A5B4FC;
+  --ratio-sealed-light: #DCE3FF;
+  --ratio-track: #EEF0F6;
+  --mark-neutral: #D4D4DC;
+  --mark-advisory: #CBD5E1;
+  --mark-blocking: #F43F5E;
+  --label-bug: #FB7185;
+  --label-feature: #818CF8;
+  --label-perf: #FBBF24;
+  --label-security: #2DD4BF;
+  --project-sky: #38BDF8;
+  --project-pink: #F472B6;
+  --project-amber: #FBBF24;
+  --role-author: #EC4899;
+  --role-implementer: #3B82F6;
+  --role-reviewer: #14B8A6;
+  --text-success: #13693A;
+  --text-danger: #B42318;
+  --text-warning: #9A4A06;
+  --success: #15803D;
+  --danger-tint: #FDF3F2;
+  --danger-line: #F3C9C5;
+  --toast: #18181B;
+  --toast-link: #93C5FD;
+  --redaction: #E4E4EA;
+  --redaction-light: #EDEDF1;
+  --space-1: 4px;
+  --space-1\.5: 6px;
+  --space-2: 8px;
+  --space-2\.5: 10px;
+  --space-3: 12px;
+  --space-3\.5: 14px;
+  --space-4: 16px;
+  --space-4\.5: 18px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-12: 48px;
+  --radius-bar: 3px;
+  --radius-xs: 5px;
+  --radius-sm: 7px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-phone: 46px;
+  --radius-full: 999px;
+  --shadow-card: 0 1px 2px rgba(15,23,42,0.04), 0 10px 28px -14px rgba(15,23,42,0.14);
+  --shadow-menu: 0 18px 40px -16px rgba(15,23,42,0.35), 0 0 0 1px rgba(15,23,42,0.07);
+  --shadow-modal: 0 24px 64px rgba(24,24,27,0.22);
+  --shadow-toast: 0 12px 32px rgba(24,24,27,0.24);
+  --shadow-ring: 0 0 0 1px #E4E4E9;
+  --blur-glass: 16px;
+  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.om-text-large-title { font-family: var(--font-sans); font-size: 30px; line-height: 36px; font-weight: 700; letter-spacing: -0.02em; }
+.om-text-page-title-lg { font-family: var(--font-sans); font-size: 22px; line-height: 29px; font-weight: 600; letter-spacing: -0.015em; }
+.om-text-page-title { font-family: var(--font-sans); font-size: 20px; line-height: 26px; font-weight: 600; letter-spacing: -0.01em; }
+.om-text-section-title { font-family: var(--font-sans); font-size: 15px; line-height: 20px; font-weight: 600; }
+.om-text-card-title { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 600; }
+.om-text-body { font-family: var(--font-sans); font-size: 13.5px; line-height: 21px; font-weight: 400; }
+.om-text-body-strong { font-family: var(--font-sans); font-size: 13.5px; line-height: 21px; font-weight: 500; }
+.om-text-small { font-family: var(--font-sans); font-size: 12.5px; line-height: 18px; font-weight: 400; }
+.om-text-caption { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 400; }
+.om-text-overline { font-family: var(--font-sans); font-size: 11.5px; line-height: 16px; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; }
+.om-text-mono { font-family: var(--font-mono); font-size: 12.5px; line-height: 18px; font-weight: 400; }
+.om-text-mono-small { font-family: var(--font-mono); font-size: 12px; line-height: 16px; font-weight: 400; }
+.om-text-kbd { font-family: var(--font-mono); font-size: 11.5px; line-height: 16px; font-weight: 400; }
