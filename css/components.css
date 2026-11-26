@@ -204,13 +204,13 @@
 @keyframes om-pulse{50%{opacity:.55}}
 @media (prefers-reduced-motion:reduce){.om-skel{animation:none}}
 
-/* ---- Dark theme: set data-theme="dark" (or "auto" to follow the OS) on <html> or the app root.
+/* ---- Dark theme (graphite: neutral near-black, no colour cast): set data-theme="dark" (or "auto" to follow the OS) on <html> or the app root.
    Token values switch in tokens.css; only the blooms need their own, dimmer recipe here. ---- */
 [data-theme="dark"] .om-app,[data-theme="dark"].om-app{color-scheme:dark}
-[data-theme="dark"] .om-canvas,[data-theme="dark"].om-canvas{background-image:radial-gradient(45% 55% at 0% 0%,rgba(14,165,233,.20),transparent 70%),radial-gradient(40% 50% at 100% 0%,rgba(219,39,119,.16),transparent 70%),radial-gradient(45% 55% at 100% 100%,rgba(202,138,4,.13),transparent 70%),radial-gradient(45% 55% at 0% 100%,rgba(5,150,105,.15),transparent 70%)}
+[data-theme="dark"] .om-canvas,[data-theme="dark"].om-canvas{background-image:radial-gradient(45% 55% at 0% 0%,rgba(14,165,233,.11),transparent 70%),radial-gradient(40% 50% at 100% 0%,rgba(219,39,119,.09),transparent 70%),radial-gradient(45% 55% at 100% 100%,rgba(202,138,4,.07),transparent 70%),radial-gradient(45% 55% at 0% 100%,rgba(5,150,105,.08),transparent 70%)}
 @media (prefers-color-scheme:dark){
   [data-theme="auto"] .om-app,[data-theme="auto"].om-app{color-scheme:dark}
-  [data-theme="auto"] .om-canvas,[data-theme="auto"].om-canvas{background-image:radial-gradient(45% 55% at 0% 0%,rgba(14,165,233,.20),transparent 70%),radial-gradient(40% 50% at 100% 0%,rgba(219,39,119,.16),transparent 70%),radial-gradient(45% 55% at 100% 100%,rgba(202,138,4,.13),transparent 70%),radial-gradient(45% 55% at 0% 100%,rgba(5,150,105,.15),transparent 70%)}
+  [data-theme="auto"] .om-canvas,[data-theme="auto"].om-canvas{background-image:radial-gradient(45% 55% at 0% 0%,rgba(14,165,233,.11),transparent 70%),radial-gradient(40% 50% at 100% 0%,rgba(219,39,119,.09),transparent 70%),radial-gradient(45% 55% at 100% 100%,rgba(202,138,4,.07),transparent 70%),radial-gradient(45% 55% at 0% 100%,rgba(5,150,105,.08),transparent 70%)}
 }
 
 /* ---- Marks that do not rely on colour alone: every label kind also gets a shape.

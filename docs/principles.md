@@ -41,7 +41,7 @@ Inter for everything, JetBrains Mono for machine things (IDs, agent names, branc
 
 ## Themes and density
 
-- **Light** is the default. **Dark** is a deep navy (`canvas` #0D1120, cards #151A2C), never black, with the same rules: one accent (a slightly brighter ultramarine), colour only in small marks, the four blooms reduced to faint glows. Every text token passes 4.5:1 in both themes.
+- **Light** is the default. **Dark** is graphite: a neutral near-black with no colour cast (`canvas` #0F1012, cards #18191C), surfaces separated by hairlines more than by shade, with the same rules: one ultramarine accent, colour only in small marks, the four blooms reduced to faint glows. Every text token passes 4.5:1 in both themes.
 - **Dense** (default) for tools people use all day: 13.5px text, 52px rows. **Comfortable** (`om-comfy`) for consumer-facing and public pages: 15px text, 60px rows, larger titles and buttons.
 
 ## Layout

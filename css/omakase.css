@@ -92,28 +92,28 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 [data-theme="dark"] {
-  --canvas: #0D1120;
-  --surface: #151A2C;
-  --surface-sunken: #111627;
-  --glass: rgba(21,26,44,0.62);
-  --line: #262C44;
-  --line-soft: #1E2339;
-  --line-strong: #394062;
-  --ink: #F2F3F8;
-  --ink-2: #CBCFDF;
-  --ink-muted: #A7ACC4;
-  --ink-subtle: #8F95B0;
+  --canvas: #0F1012;
+  --surface: #18191C;
+  --surface-sunken: #141517;
+  --glass: rgba(24,25,28,0.7);
+  --line: #2A2B30;
+  --line-soft: #222327;
+  --line-strong: #3A3B42;
+  --ink: #F4F4F5;
+  --ink-2: #D4D4D8;
+  --ink-muted: #A1A1AA;
+  --ink-subtle: #8D8D96;
   --accent: #4562F8;
-  --accent-strong: #93A5FF;
-  --accent-tint: #232B5C;
-  --accent-wash: #1B2247;
+  --accent-strong: #9AAAFF;
+  --accent-tint: #262A45;
+  --accent-wash: #1F2230;
   --on-accent: #FFFFFF;
   --bloom-sky: #0EA5E9;
   --bloom-pink: #DB2777;
   --bloom-sun: #CA8A04;
   --bloom-mint: #059669;
-  --status-spec: #8B95AD;
-  --status-open: #4B5372;
+  --status-spec: #8E929E;
+  --status-open: #4A4B53;
   --status-progress: #60A5FA;
   --status-review: #FBBF24;
   --status-returned: #FB7185;
@@ -121,10 +121,10 @@
   --ratio-pass: #34D399;
   --ratio-fail: #FB7185;
   --ratio-sealed: #818CF8;
-  --ratio-sealed-light: #2E3566;
-  --ratio-track: #252B44;
-  --mark-neutral: #555D7E;
-  --mark-advisory: #646C8C;
+  --ratio-sealed-light: #2C2F4A;
+  --ratio-track: #26272C;
+  --mark-neutral: #55565E;
+  --mark-advisory: #64656E;
   --mark-blocking: #FB7185;
   --label-bug: #FB7185;
   --label-feature: #A5B4FC;
@@ -140,48 +140,48 @@
   --text-danger: #FDA4AF;
   --text-warning: #FCD34D;
   --success: #15803D;
-  --danger-tint: #2A1622;
-  --danger-line: #5B2434;
-  --toast: #1C2238;
-  --toast-link: #93A5FF;
-  --redaction: #2A3050;
-  --redaction-light: #222843;
-  --surface-hover: #1C2238;
-  --surface-inset: #0F1324;
-  --glass-strong: rgba(21,26,44,0.88);
+  --danger-tint: #2A1719;
+  --danger-line: #5A2530;
+  --toast: #1E1F23;
+  --toast-link: #9AAAFF;
+  --redaction: #2A2B31;
+  --redaction-light: #222327;
+  --surface-hover: #202125;
+  --surface-inset: #0B0C0D;
+  --glass-strong: rgba(24,25,28,0.9);
   --glass-line: rgba(255,255,255,0.06);
   --alert: #E11D48;
-  --scrim: rgba(3,5,12,0.62);
-  --shadow-card: 0 1px 2px rgba(0,0,0,0.35), 0 12px 30px -14px rgba(0,0,0,0.65);
+  --scrim: rgba(0,0,0,0.6);
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.4), 0 12px 30px -14px rgba(0,0,0,0.7);
   --shadow-menu: 0 18px 40px -16px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06);
   --shadow-modal: 0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
   --shadow-toast: 0 14px 36px -10px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.08);
-  --shadow-ring: 0 0 0 1px #2C3350;
+  --shadow-ring: 0 0 0 1px #2E2F35;
 }
 @media (prefers-color-scheme: dark) {
   [data-theme="auto"] {
-    --canvas: #0D1120;
-    --surface: #151A2C;
-    --surface-sunken: #111627;
-    --glass: rgba(21,26,44,0.62);
-    --line: #262C44;
-    --line-soft: #1E2339;
-    --line-strong: #394062;
-    --ink: #F2F3F8;
-    --ink-2: #CBCFDF;
-    --ink-muted: #A7ACC4;
-    --ink-subtle: #8F95B0;
+    --canvas: #0F1012;
+    --surface: #18191C;
+    --surface-sunken: #141517;
+    --glass: rgba(24,25,28,0.7);
+    --line: #2A2B30;
+    --line-soft: #222327;
+    --line-strong: #3A3B42;
+    --ink: #F4F4F5;
+    --ink-2: #D4D4D8;
+    --ink-muted: #A1A1AA;
+    --ink-subtle: #8D8D96;
     --accent: #4562F8;
-    --accent-strong: #93A5FF;
-    --accent-tint: #232B5C;
-    --accent-wash: #1B2247;
+    --accent-strong: #9AAAFF;
+    --accent-tint: #262A45;
+    --accent-wash: #1F2230;
     --on-accent: #FFFFFF;
     --bloom-sky: #0EA5E9;
     --bloom-pink: #DB2777;
     --bloom-sun: #CA8A04;
     --bloom-mint: #059669;
-    --status-spec: #8B95AD;
-    --status-open: #4B5372;
+    --status-spec: #8E929E;
+    --status-open: #4A4B53;
     --status-progress: #60A5FA;
     --status-review: #FBBF24;
     --status-returned: #FB7185;
@@ -189,10 +189,10 @@
     --ratio-pass: #34D399;
     --ratio-fail: #FB7185;
     --ratio-sealed: #818CF8;
-    --ratio-sealed-light: #2E3566;
-    --ratio-track: #252B44;
-    --mark-neutral: #555D7E;
-    --mark-advisory: #646C8C;
+    --ratio-sealed-light: #2C2F4A;
+    --ratio-track: #26272C;
+    --mark-neutral: #55565E;
+    --mark-advisory: #64656E;
     --mark-blocking: #FB7185;
     --label-bug: #FB7185;
     --label-feature: #A5B4FC;
@@ -208,23 +208,23 @@
     --text-danger: #FDA4AF;
     --text-warning: #FCD34D;
     --success: #15803D;
-    --danger-tint: #2A1622;
-    --danger-line: #5B2434;
-    --toast: #1C2238;
-    --toast-link: #93A5FF;
-    --redaction: #2A3050;
-    --redaction-light: #222843;
-    --surface-hover: #1C2238;
-    --surface-inset: #0F1324;
-    --glass-strong: rgba(21,26,44,0.88);
+    --danger-tint: #2A1719;
+    --danger-line: #5A2530;
+    --toast: #1E1F23;
+    --toast-link: #9AAAFF;
+    --redaction: #2A2B31;
+    --redaction-light: #222327;
+    --surface-hover: #202125;
+    --surface-inset: #0B0C0D;
+    --glass-strong: rgba(24,25,28,0.9);
     --glass-line: rgba(255,255,255,0.06);
     --alert: #E11D48;
-    --scrim: rgba(3,5,12,0.62);
-    --shadow-card: 0 1px 2px rgba(0,0,0,0.35), 0 12px 30px -14px rgba(0,0,0,0.65);
+    --scrim: rgba(0,0,0,0.6);
+    --shadow-card: 0 1px 2px rgba(0,0,0,0.4), 0 12px 30px -14px rgba(0,0,0,0.7);
     --shadow-menu: 0 18px 40px -16px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06);
     --shadow-modal: 0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
     --shadow-toast: 0 14px 36px -10px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.08);
-    --shadow-ring: 0 0 0 1px #2C3350;
+    --shadow-ring: 0 0 0 1px #2E2F35;
   }
 }
 .om-text-large-title { font-family: var(--font-sans); font-size: 30px; line-height: 36px; font-weight: 700; letter-spacing: -0.02em; }
@@ -447,13 +447,13 @@
 @keyframes om-pulse{50%{opacity:.55}}
 @media (prefers-reduced-motion:reduce){.om-skel{animation:none}}
 
-/* ---- Dark theme: set data-theme="dark" (or "auto" to follow the OS) on <html> or the app root.
+/* ---- Dark theme (graphite: neutral near-black, no colour cast): set data-theme="dark" (or "auto" to follow the OS) on <html> or the app root.
    Token values switch in tokens.css; only the blooms need their own, dimmer recipe here. ---- */
 [data-theme="dark"] .om-app,[data-theme="dark"].om-app{color-scheme:dark}
-[data-theme="dark"] .om-canvas,[data-theme="dark"].om-canvas{background-image:radial-gradient(45% 55% at 0% 0%,rgba(14,165,233,.20),transparent 70%),radial-gradient(40% 50% at 100% 0%,rgba(219,39,119,.16),transparent 70%),radial-gradient(45% 55% at 100% 100%,rgba(202,138,4,.13),transparent 70%),radial-gradient(45% 55% at 0% 100%,rgba(5,150,105,.15),transparent 70%)}
+[data-theme="dark"] .om-canvas,[data-theme="dark"].om-canvas{background-image:radial-gradient(45% 55% at 0% 0%,rgba(14,165,233,.11),transparent 70%),radial-gradient(40% 50% at 100% 0%,rgba(219,39,119,.09),transparent 70%),radial-gradient(45% 55% at 100% 100%,rgba(202,138,4,.07),transparent 70%),radial-gradient(45% 55% at 0% 100%,rgba(5,150,105,.08),transparent 70%)}
 @media (prefers-color-scheme:dark){
   [data-theme="auto"] .om-app,[data-theme="auto"].om-app{color-scheme:dark}
-  [data-theme="auto"] .om-canvas,[data-theme="auto"].om-canvas{background-image:radial-gradient(45% 55% at 0% 0%,rgba(14,165,233,.20),transparent 70%),radial-gradient(40% 50% at 100% 0%,rgba(219,39,119,.16),transparent 70%),radial-gradient(45% 55% at 100% 100%,rgba(202,138,4,.13),transparent 70%),radial-gradient(45% 55% at 0% 100%,rgba(5,150,105,.15),transparent 70%)}
+  [data-theme="auto"] .om-canvas,[data-theme="auto"].om-canvas{background-image:radial-gradient(45% 55% at 0% 0%,rgba(14,165,233,.11),transparent 70%),radial-gradient(40% 50% at 100% 0%,rgba(219,39,119,.09),transparent 70%),radial-gradient(45% 55% at 100% 100%,rgba(202,138,4,.07),transparent 70%),radial-gradient(45% 55% at 0% 100%,rgba(5,150,105,.08),transparent 70%)}
 }
 
 /* ---- Marks that do not rely on colour alone: every label kind also gets a shape.

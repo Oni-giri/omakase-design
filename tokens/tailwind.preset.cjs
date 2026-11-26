@@ -93,7 +93,7 @@ module.exports = {
       "boxShadow": {
         "om-card": {
           "light": "0 1px 2px rgba(15,23,42,0.04), 0 10px 28px -14px rgba(15,23,42,0.14)",
-          "dark": "0 1px 2px rgba(0,0,0,0.35), 0 12px 30px -14px rgba(0,0,0,0.65)"
+          "dark": "0 1px 2px rgba(0,0,0,0.4), 0 12px 30px -14px rgba(0,0,0,0.7)"
         },
         "om-menu": {
           "light": "0 18px 40px -16px rgba(15,23,42,0.35), 0 0 0 1px rgba(15,23,42,0.07)",
@@ -109,7 +109,7 @@ module.exports = {
         },
         "om-ring": {
           "light": "0 0 0 1px #E4E4E9",
-          "dark": "0 0 0 1px #2C3350"
+          "dark": "0 0 0 1px #2E2F35"
         }
       },
       "fontFamily": {
