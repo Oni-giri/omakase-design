@@ -48,7 +48,7 @@ Inter for everything, JetBrains Mono for machine things (IDs, agent names, branc
 
 ## Iconography
 
-Single-weight stroke icons on a 16px grid, 1.5px stroke, round joins, drawn in `ink` (or the role colour for role glyphs). They sit 16px in navigation and 14px inline. Status, priority and marks are drawn in CSS, not icons. No emoji anywhere. The SVGs are in `icons/` (and the Design System artifact); the example logo is in `logos/`.
+Single-weight stroke icons on a 16px grid, 1.5px stroke, round joins, drawn in `ink` (or the role colour for role glyphs). They sit 16px in navigation and 14px inline. Status, priority and marks are drawn in CSS, not icons. No emoji anywhere. The SVGs are in `icons/`; the example logo is in `logos/`.
 
 ## Voice
 

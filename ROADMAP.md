@@ -18,4 +18,3 @@ Tokens, `omakase.css`, about 40 React components, agent instructions, examples f
 - Per-project accent and bloom presets (one accent each, same rules).
 - Figma or Penpot library generated from `tokens.json`.
 - Visual regression tests on the examples.
-- Sync job that updates the claude.ai Design System artifact from this repo.

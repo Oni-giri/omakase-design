@@ -54,7 +54,3 @@ import { AppRoot, Card, StatusGlyph, RatioBar, Button } from './omakase/react';
 Light canvas, colour at the corners, content on white. Drawn glyphs and ratio bars, never pills. One accent. Colour lives in small marks. Centred pop-ups, never side sheets. Glass only for chrome. Not grey. Plain, verb-first copy. Full version: [`docs/principles.md`](docs/principles.md).
 
 ![Detail page](docs/screenshots/detail-page.png)
-
-## Also on claude.ai
-
-The same system is kept as a Design System artifact ("Omakase") for design work in Claude. When tokens change, change `tokens/tokens.json` here, run the build, and update the artifact.
