@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ripgrep · Brewhunt</title>
+<link rel="stylesheet" href="../css/omakase.css">
+</head>
+<!-- A public catalogue page (Brewhunt, a Homebrew package store) in comfortable density, no sidebar.
+     Sample data. Switch data-theme on <html> to "dark" or "auto" to see the dark theme. -->
+<body class="om-app om-canvas om-comfy" style="background-attachment:fixed">
+<header class="om-topbar">
+  <a href="#" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)"><span class="om-tile" style="--t:var(--bloom-sun);width:32px;height:32px;font-size:12px;border-radius:9px" aria-hidden="true">bh</span><span style="font-weight:600;font-size:16px">Brewhunt</span></a>
+  <nav aria-label="Main" style="display:flex;gap:20px">
+    <a class="om-toplink" href="#" aria-current="page">Discover</a><a class="om-toplink" href="#">New this week</a><a class="om-toplink" href="#">Trending</a><a class="om-toplink" href="#">Categories</a>
+  </nav>
+  <div style="flex:1"></div>
+  <label class="om-search" style="min-height:40px;box-shadow:none;width:300px"><svg class="om-ic" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg><input type="search" placeholder="Search 7,912 packages" aria-label="Search packages"><kbd class="om-kbd">/</kbd></label>
+</header>
+
+<main class="om-container" style="display:flex;flex-direction:column;gap:28px;padding-top:28px;padding-bottom:56px">
+  <nav class="om-crumbs" aria-label="Breadcrumb"><a href="#">Discover</a><span aria-hidden="true">/</span><a href="#">Command line</a><span aria-hidden="true">/</span><span aria-current="page">ripgrep</span></nav>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:22px;min-width:0">
+      <header style="display:flex;gap:18px;align-items:flex-start">
+        <span class="om-tile om-tile-lg" style="--t:var(--project-sky)" aria-hidden="true">rg</span>
+        <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+          <h1 class="om-page-t om-page-t-lg">ripgrep</h1>
+          <p style="margin:0;font-size:17px;color:var(--ink-2);line-height:1.45">Search tool like grep and The Silver Searcher, recursive and fast, that respects your .gitignore.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;color:var(--ink-subtle);font-size:14px">
+            <span class="om-mark om-l-feat">search</span><span class="om-mark om-l-perf">rust</span><span class="om-mark om-l-sec">developer tools</span>
+            <span>Formula · 14.1.1 · MIT · updated 3 days ago</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="om-card" style="overflow:hidden">
+        <div class="om-tabs" role="tablist" aria-label="Package sections">
+          <button class="om-stab om-stab-on" role="tab" aria-selected="true">Overview</button>
+          <button class="om-stab" role="tab" aria-selected="false">Versions<span class="om-stab-n">38</span></button>
+          <button class="om-stab" role="tab" aria-selected="false">Dependencies<span class="om-stab-n">1</span></button>
+          <button class="om-stab" role="tab" aria-selected="false">Used by<span class="om-stab-n">214</span></button>
+        </div>
+        <div class="om-card-b om-prose">
+          <h2 style="margin-top:0">What it does</h2>
+          <p>ripgrep recursively searches the current directory for a regex pattern. By default it respects <code>.gitignore</code> and skips hidden files, binary files and directories you would not want to search.</p>
+          <pre>rg "fn main" --type rust
+rg -i todo src/ --glob '!*.test.ts'</pre>
+          <h2>Why people install it</h2>
+          <p>It is usually much faster than <code>grep -r</code> on real repositories, with sensible defaults and good Unicode support. Editors such as VS Code use it under the hood for search.</p>
+        </div>
+      </section>
+    </div>
+
+    <aside style="display:flex;flex-direction:column;gap:16px">
+      <section class="om-card">
+        <div class="om-card-b" style="display:flex;flex-direction:column;gap:14px">
+          <span class="om-label">Install</span>
+          <div class="om-code"><span class="om-code-p" aria-hidden="true">$</span><code class="om-code-t">brew install ripgrep</code><button type="button" class="om-code-b">Copy</button></div>
+          <span class="om-hint">Bottles for macOS 13 to 15 (Apple silicon and Intel) and Linux.</span>
+        </div>
+      </section>
+      <section class="om-stat">
+        <span class="om-stat-k">Installs in the last 30 days</span>
+        <div style="display:flex;align-items:flex-end;gap:14px"><span class="om-stat-v">182,430</span><svg class="om-spark" width="140" height="32" viewBox="0 0 140 32" aria-hidden="true"><polyline points="0.0,30.0 12.7,25.8 25.5,27.2 38.2,21.6 50.9,23.0 63.6,17.4 76.4,14.6 89.1,16.0 101.8,10.4 114.5,6.2 127.3,7.6 140.0,2.0"/><circle cx="140.0" cy="2.0" r="2.5"/></svg></div>
+        <span class="om-stat-d">Up 6% on the previous 30 days · rank 41 of 7,912</span>
+      </section>
+      <section class="om-card">
+        <div class="om-card-b" style="display:flex;flex-direction:column">
+          <div class="om-prop"><span class="om-prop-k">Installed on request</span><span class="om-tline"><span class="om-ratio" style="width:72px" aria-hidden="true"><span class="om-r-pass" style="width:91%"></span></span>91%</span></div>
+          <div class="om-prop"><span class="om-prop-k">As a dependency</span><span>9%</span></div>
+          <div class="om-prop"><span class="om-prop-k">Homepage</span><a class="om-link" href="#">github.com/BurntSushi/ripgrep</a></div>
+          <div class="om-prop"><span class="om-prop-k">Depends on</span><span class="om-mono">pcre2</span></div>
+          <div class="om-prop"><span class="om-prop-k">License</span><span>MIT or Unlicense</span></div>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <section style="display:flex;flex-direction:column;gap:14px" aria-labelledby="new">
+    <div style="display:flex;align-items:baseline;gap:12px"><h2 id="new" class="om-section-t">New this week</h2><span class="om-hint">Added to Homebrew in the last 7 days</span><a class="om-link" href="#" style="margin-left:auto;font-size:14px">See all</a></div>
+    <div class="om-grid">
+        <a class="om-card om-card-link" href="#">
+          <div style="display:flex;align-items:center;gap:12px"><span class="om-tile" style="--t:var(--project-sky)" aria-hidden="true">bt</span><div style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-weight:600;font-size:15.5px">bottom</span><span class="om-hint">New · monitoring</span></div></div>
+          <p style="margin:0;color:var(--ink-2);line-height:1.5">A cross-platform graphical process and system monitor.</p>
+          <span class="om-tline"><svg class="om-spark" width="72" height="20" viewBox="0 0 72 20" aria-hidden="true"><polyline points="0.0,18.0 10.3,16.8 20.6,14.3 30.9,15.5 41.1,11.8 51.4,9.4 61.7,5.7 72.0,2.0"/><circle cx="72.0" cy="2.0" r="2.5"/></svg>4,310 installs this month</span>
+        </a>
+        <a class="om-card om-card-link" href="#">
+          <div style="display:flex;align-items:center;gap:12px"><span class="om-tile" style="--t:var(--project-pink)" aria-hidden="true">ji</span><div style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-weight:600;font-size:15.5px">jujutsu</span><span class="om-hint">New · version control</span></div></div>
+          <p style="margin:0;color:var(--ink-2);line-height:1.5">A Git-compatible version control system that is simple and powerful.</p>
+          <span class="om-tline"><svg class="om-spark" width="72" height="20" viewBox="0 0 72 20" aria-hidden="true"><polyline points="0.0,18.0 10.3,16.8 20.6,16.8 30.9,14.3 41.1,11.8 51.4,10.6 61.7,6.9 72.0,2.0"/><circle cx="72.0" cy="2.0" r="2.5"/></svg>2,905 installs this month</span>
+        </a>
+        <a class="om-card om-card-link" href="#">
+          <div style="display:flex;align-items:center;gap:12px"><span class="om-tile" style="--t:var(--project-amber)" aria-hidden="true">ya</span><div style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-weight:600;font-size:15.5px">yazi</span><span class="om-hint">New · files</span></div></div>
+          <p style="margin:0;color:var(--ink-2);line-height:1.5">Blazing fast terminal file manager written in Rust, based on async I/O.</p>
+          <span class="om-tline"><svg class="om-spark" width="72" height="20" viewBox="0 0 72 20" aria-hidden="true"><polyline points="0.0,18.0 10.3,18.0 20.6,16.4 30.9,13.2 41.1,13.2 51.4,10.0 61.7,5.2 72.0,2.0"/><circle cx="72.0" cy="2.0" r="2.5"/></svg>2,288 installs this month</span>
+        </a>
+    </div>
+  </section>
+</main>
+</body>
+</html>

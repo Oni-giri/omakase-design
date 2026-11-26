@@ -55,6 +55,12 @@
   --color-toast-link: var(--toast-link);
   --color-redaction: var(--redaction);
   --color-redaction-light: var(--redaction-light);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-inset: var(--surface-inset);
+  --color-glass-strong: var(--glass-strong);
+  --color-glass-line: var(--glass-line);
+  --color-alert: var(--alert);
+  --color-scrim: var(--scrim);
   --radius-om-bar: var(--radius-bar);
   --radius-om-xs: var(--radius-xs);
   --radius-om-sm: var(--radius-sm);

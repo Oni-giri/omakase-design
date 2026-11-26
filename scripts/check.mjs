@@ -24,6 +24,8 @@ const rules = [
     test: (l, f) => !/\.svg$/.test(f) && /(?:color|fill|stroke|background|border|shadow|outline|bg-\[|text-\[|border-\[|:)\s*["'`]?\s*#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})\b/i.test(l) },
   { id: 'gradient', msg: 'Gradient. The only gradients allowed are the corner blooms (om-canvas) and the sealed hatch.',
     test: (l) => /(linear|radial|conic)-gradient|bg-gradient-to-/.test(l) },
+  { id: 'icon-img', msg: 'Icon as <img>. Use the inline icons (currentColor) so they work in both themes.',
+    test: (l) => /<img[^>]+icons\/[a-z-]+\.svg/.test(l) },
   { id: 'emoji', msg: 'Emoji in UI. Use an icon from omakase/icons or plain text.',
     test: (l) => /\p{Extended_Pictographic}/u.test(l) },
 ];

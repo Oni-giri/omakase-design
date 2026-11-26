@@ -29,10 +29,61 @@ export function RatioBar({ segments, total, width = 90, label }: RatioBarProps) 
 
 export type MarkKind = 'all' | 'sealed' | 'blocking' | 'advisory' | 'bug' | 'feature' | 'perf' | 'security' | 'chore';
 const markClass: Record<MarkKind, string> = { all: 'om-m-all', sealed: 'om-m-sealed', blocking: 'om-m-block', advisory: 'om-m-adv', bug: 'om-l-bug', feature: 'om-l-feat', perf: 'om-l-perf', security: 'om-l-sec', chore: 'om-l-chore' };
-export interface MarkProps { kind?: MarkKind; /** Any CSS colour for a custom label. */ color?: string; children: React.ReactNode }
-/** A 16x5 colour bar plus plain text. Use it wherever you would reach for a tag, badge or pill. */
-export function Mark({ kind = 'all', color, children }: MarkProps) {
-  return <span className={cx('om-mark', markClass[kind])} style={color ? ({ '--m': color } as React.CSSProperties) : undefined}>{children}</span>;
+export type MarkShape = 'solid' | 'split' | 'dots' | 'hollow' | 'short';
+export interface MarkProps {
+  kind?: MarkKind;
+  /** Any CSS colour for a custom label. Pair it with a `shape`, so labels differ by more than hue. */
+  color?: string;
+  /** Bar shape. Built-in labels already have one (bug solid, feature split, perf dots, security short, chore hollow). */
+  shape?: MarkShape;
+  children: React.ReactNode;
+}
+/** A 16x5 bar plus plain text. Use it wherever you would reach for a tag, badge or pill. Max 8 label kinds per app. */
+export function Mark({ kind = 'all', color, shape, children }: MarkProps) {
+  return <span className={cx('om-mark', markClass[kind], shape && shape !== 'solid' && `om-mk-${shape}`)} style={color ? ({ '--m': color } as React.CSSProperties) : undefined}>{children}</span>;
+}
+
+/** Monogram tile standing in for an app or package icon. color: a token such as 'var(--project-pink)'. */
+export function Tile({ text, color, large }: { text: string; color?: string; large?: boolean }) {
+  return <span className={cx('om-tile', large && 'om-tile-lg')} style={color ? ({ '--t': color } as React.CSSProperties) : undefined} aria-hidden="true">{text.slice(0, 2)}</span>;
+}
+
+/** One-line command with a copy button. */
+export function CodeBlock({ code, prompt = '$', label = 'Copy' }: { code: string; prompt?: string; label?: string }) {
+  const [copied, setCopied] = React.useState(false);
+  const copy = async () => { try { await navigator.clipboard.writeText(code); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch { /* clipboard blocked */ } };
+  return (
+    <div className="om-code">
+      {prompt && <span className="om-code-p" aria-hidden="true">{prompt}</span>}
+      <code className="om-code-t">{code}</code>
+      <button type="button" className="om-code-b" onClick={copy} aria-live="polite">{copied ? 'Copied' : label}</button>
+    </div>
+  );
+}
+
+/** A thin trend line in the accent, last point marked. Put the number next to it in text. */
+export function Sparkline({ values, width = 96, height = 24, label }: { values: number[]; width?: number; height?: number; label: string }) {
+  if (values.length < 2) return null;
+  const min = Math.min(...values), max = Math.max(...values), span = max - min || 1;
+  const pts = values.map((v, i) => [(i / (values.length - 1)) * width, height - 2 - ((v - min) / span) * (height - 4)]);
+  const last = pts[pts.length - 1];
+  return (
+    <svg className="om-spark" width={width} height={height} viewBox={`0 0 ${width} ${height}`} role="img" aria-label={label}>
+      <polyline points={pts.map((p) => p.join(',')).join(' ')} />
+      <circle cx={last[0]} cy={last[1]} r={2.5} />
+    </svg>
+  );
+}
+
+/** Large search field for public pages. */
+export function SearchField({ placeholder, value, onChange, shortcut = '/' }: { placeholder: string; value?: string; onChange?: (v: string) => void; shortcut?: string }) {
+  return (
+    <label className="om-search">
+      <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true" style={{ color: 'var(--ink-subtle)' }}><circle cx="7" cy="7" r="4.5" /><path d="M10.5 10.5L14 14" /></svg>
+      <input type="search" placeholder={placeholder} value={value} onChange={(e) => onChange?.(e.target.value)} aria-label={placeholder} />
+      {shortcut && <kbd className="om-kbd">{shortcut}</kbd>}
+    </label>
+  );
 }
 
 export interface ProjectLabelProps { color: string; children: React.ReactNode }

@@ -4,7 +4,7 @@ import * as React from 'react';
 import {
   AppRoot, Shell, Sidebar, Brand, NavGroup, NavItem, PageHeader, Breadcrumb, Card, Panel, Prop,
   StatusGlyph, Priority, Mark, RatioBar, Button, Segmented, RunSteps, Textarea, Field, InlineAlert,
-  Toast, ProjectLabel, StatTile, ActivityItem, HoldButton,
+  Toast, ProjectLabel, StatTile, ActivityItem, HoldButton, IconIssues, IconBoard, IconAccess,
 } from '../../react';
 
 export function DetailPage() {
@@ -18,14 +18,14 @@ export function DetailPage() {
         sidebar={
           <Sidebar brand={<Brand mark={<img src="../../logos/holdout-mark.svg" width={30} height={30} alt="" />} name="Holdout" sub="Personal workspace" />}>
             <NavGroup>
-              <NavItem href="#" active icon={<img src="../../icons/issues.svg" alt="" />} count={9}>Issues</NavItem>
-              <NavItem href="#" icon={<img src="../../icons/board.svg" alt="" />}>Board</NavItem>
+              <NavItem href="#" active icon={<IconIssues />} count={9}>Issues</NavItem>
+              <NavItem href="#" icon={<IconBoard />}>Board</NavItem>
             </NavGroup>
             <NavGroup label="Projects">
               <NavItem href="#"><ProjectLabel color="var(--project-sky)">Periscope</ProjectLabel></NavItem>
             </NavGroup>
             <NavGroup end label="Workspace">
-              <NavItem href="#" icon={<img src="../../icons/access.svg" alt="" />} count={2} alert>Access &amp; log</NavItem>
+              <NavItem href="#" icon={<IconAccess />} count={2} alert>Access &amp; log</NavItem>
             </NavGroup>
           </Sidebar>
         }

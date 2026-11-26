@@ -58,7 +58,7 @@ export function BulkAction(props: React.ButtonHTMLAttributes<HTMLButtonElement>)
 export function InlineAlert({ title, children, actions }: { title: React.ReactNode; children?: React.ReactNode; actions?: React.ReactNode }) {
   return (
     <div className="om-alert" role="alert">
-      <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#B42318" strokeWidth="1.6" aria-hidden="true" style={{ flex: 'none', marginTop: 1 }}><circle cx="8" cy="8" r="6" /><path d="M8 4.5v4M8 10.8v.4" /></svg>
+      <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" style={{ flex: 'none', marginTop: 1, color: 'var(--text-danger)' }}><circle cx="8" cy="8" r="6" /><path d="M8 4.5v4M8 10.8v.4" /></svg>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
         <strong style={{ fontWeight: 600 }}>{title}</strong>
         {children && <span style={{ color: 'var(--ink-2)' }}>{children}</span>}

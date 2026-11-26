@@ -23,6 +23,10 @@ Follow section 1 of `omakase/AGENTS.md` for the stack the script reported:
 - Plain HTML or another framework: link `omakase/css/omakase.css` and put `class="om-app om-canvas"` on `<body>`.
 - Tailwind v3: add `presets: [require('./<path>/omakase/tokens/tailwind.preset.cjs')]`. Tailwind v4: import `omakase/tokens/tailwind-v4.css` after `omakase/css/omakase.css`.
 
+Then pick, without asking unless it is unclear:
+- Density: dense (default) for tools and dashboards used all day; comfortable (`om-comfy`, `<AppRoot density="comfortable">`) for public sites, stores, docs and consumer apps.
+- Theme: light by default; `data-theme="auto"` when the user wants dark mode to follow the system, `"dark"` to force it.
+
 Do not copy token values into the app's own CSS; always reference the variables.
 
 ## 3. Before building any screen
@@ -36,6 +40,6 @@ Prefer existing components. If something is missing, build it from the same toke
 ## 4. Before you finish
 
 1. Run `node omakase/scripts/check.mjs src` (or the folders that hold UI code). Fix every hit, or mark a line that is genuinely fine with an `omakase-ignore` comment and say why.
-2. Go through the checklist in section 7 of `omakase/AGENTS.md`.
+2. Go through the checklist in section 7 of `omakase/AGENTS.md`, including the dark-theme look if the app offers it.
 3. If you can run the app and take a screenshot, compare it with `omakase/docs/screenshots/`.
 4. In your summary, list anything where a request forced you to break a rule, and which rule.

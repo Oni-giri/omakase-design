@@ -35,6 +35,17 @@ Reference: `examples/react/DetailPage.tsx`, `docs/screenshots/detail-page.png`.
 1. A row of `StatTile`s (3 to 4): label, big number, a ratio bar when there is a proportion, one line of context.
 2. Below, cards with tables or feeds. Charts: thin lines and bars in `--accent` and the status colours on white, no gridline clutter, numbers labelled directly.
 
+## Public catalogue page (store, directory, docs)
+
+Reference: `examples/brewhunt.html`, `docs/screenshots/catalogue-page.png`. Comfortable density, no sidebar.
+
+1. `TopBar`: brand on the left, 3 to 5 text links, search on the right. Glass, never dark.
+2. `Container` (1160px) with a breadcrumb, then a two-column grid: content on the left, a 360px side column on the right.
+3. Item header: a large `Tile` (or the real icon), a 30px title, a one-sentence description at 17px, then marks and a meta line (type · version · licence · updated).
+4. Left column: a card with page tabs (`om-tabs` without status glyphs) and `om-prose` content.
+5. Side column, top to bottom: the main action (install `CodeBlock`), a `StatTile` with a `Sparkline`, then a details card of `om-prop` rows with ratio bars for shares.
+6. Below: a section title with a hint and a "See all" link, then a grid of clickable cards (`om-card om-card-link`): tile, name, one line of context, description, a sparkline with its number.
+
 ## Phone
 
 1. Large 30px title, then cards with 16px radius stacked in one column, 16px side padding.

@@ -1,9 +1,32 @@
 import * as React from 'react';
 import { cx } from '../cx';
 
-/** Root of an Omakase app: sets fonts, the canvas colour and focus rings. Add `bloom` for the four corner washes. */
-export function AppRoot({ bloom = true, children }: { bloom?: boolean; children: React.ReactNode }) {
-  return <div className={cx('om-app', bloom && 'om-canvas')} style={{ minHeight: '100vh', backgroundAttachment: 'fixed' }}>{children}</div>;
+export interface AppRootProps {
+  /** The four corner washes. Default true. */
+  bloom?: boolean;
+  /** 'dense' (default) for tools used all day; 'comfortable' for consumer-facing pages (15px text, roomier rows). */
+  density?: 'dense' | 'comfortable';
+  /** 'light' (default), 'dark', or 'auto' to follow the operating system. */
+  theme?: 'light' | 'dark' | 'auto';
+  children: React.ReactNode;
+}
+/** Root of an Omakase app: fonts, canvas, focus rings, theme and density. */
+export function AppRoot({ bloom = true, density = 'dense', theme = 'light', children }: AppRootProps) {
+  return (
+    <div data-theme={theme} className={cx('om-app', bloom && 'om-canvas', density === 'comfortable' && 'om-comfy')} style={{ minHeight: '100vh', backgroundAttachment: 'fixed' }}>
+      {children}
+    </div>
+  );
+}
+
+/** Top bar for public sites: brand, links, search, one action. */
+export function TopBar({ children }: { children: React.ReactNode }) {
+  return <header className="om-topbar">{children}</header>;
+}
+
+/** Centred column, 1160px max, for public pages without a sidebar. */
+export function Container({ children, className }: { children: React.ReactNode; className?: string }) {
+  return <div className={cx('om-container', className)}>{children}</div>;
 }
 
 /** Sidebar | main | optional right rail. */

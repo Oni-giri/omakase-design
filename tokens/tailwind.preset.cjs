@@ -57,7 +57,13 @@ module.exports = {
         "toast": "var(--toast)",
         "toast-link": "var(--toast-link)",
         "redaction": "var(--redaction)",
-        "redaction-light": "var(--redaction-light)"
+        "redaction-light": "var(--redaction-light)",
+        "surface-hover": "var(--surface-hover)",
+        "surface-inset": "var(--surface-inset)",
+        "glass-strong": "var(--glass-strong)",
+        "glass-line": "var(--glass-line)",
+        "alert": "var(--alert)",
+        "scrim": "var(--scrim)"
       },
       "spacing": {
         "om-1": "4px",
@@ -85,11 +91,26 @@ module.exports = {
         "om-full": "999px"
       },
       "boxShadow": {
-        "om-card": "0 1px 2px rgba(15,23,42,0.04), 0 10px 28px -14px rgba(15,23,42,0.14)",
-        "om-menu": "0 18px 40px -16px rgba(15,23,42,0.35), 0 0 0 1px rgba(15,23,42,0.07)",
-        "om-modal": "0 24px 64px rgba(24,24,27,0.22)",
-        "om-toast": "0 14px 36px -10px rgba(15,23,42,0.28), 0 0 0 1px rgba(15,23,42,0.07)",
-        "om-ring": "0 0 0 1px #E4E4E9"
+        "om-card": {
+          "light": "0 1px 2px rgba(15,23,42,0.04), 0 10px 28px -14px rgba(15,23,42,0.14)",
+          "dark": "0 1px 2px rgba(0,0,0,0.35), 0 12px 30px -14px rgba(0,0,0,0.65)"
+        },
+        "om-menu": {
+          "light": "0 18px 40px -16px rgba(15,23,42,0.35), 0 0 0 1px rgba(15,23,42,0.07)",
+          "dark": "0 18px 40px -16px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06)"
+        },
+        "om-modal": {
+          "light": "0 24px 64px rgba(24,24,27,0.22)",
+          "dark": "0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06)"
+        },
+        "om-toast": {
+          "light": "0 14px 36px -10px rgba(15,23,42,0.28), 0 0 0 1px rgba(15,23,42,0.07)",
+          "dark": "0 14px 36px -10px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.08)"
+        },
+        "om-ring": {
+          "light": "0 0 0 1px #E4E4E9",
+          "dark": "0 0 0 1px #2C3350"
+        }
       },
       "fontFamily": {
         "sans": [

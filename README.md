@@ -1,6 +1,6 @@
 # Omakase
 
-*The chef chooses.* An opinionated design system for web apps: light, joyous and quiet. The decisions are already made (one ultramarine accent, drawn status glyphs, ratio bars instead of pills, white cards on a canvas with four soft corner blooms, centred pop-ups), so a new app starts from a finished taste instead of a blank page.
+*The chef chooses.* An opinionated design system for web apps: light, joyous and quiet. The decisions are already made (one ultramarine accent, drawn status glyphs, ratio bars instead of pills, white cards on a canvas with four soft corner blooms, centred pop-ups), so a new app starts from a finished taste instead of a blank page. Light and dark themes; dense for tools, comfortable for public pages.
 
 ![List page](docs/screenshots/list-page.png)
 
@@ -21,9 +21,10 @@ The agent then installs the system on its first UI task (`skill/omakase/install.
 | `tokens/tokens.json` | Source of truth: colours, type, spacing, radius, shadows, each with a usage note. |
 | `tokens/tokens.css` | Tokens as CSS custom properties plus `.om-text-*` type classes. Generated. |
 | `tokens/tailwind.preset.cjs`, `tokens/tailwind-v4.css` | Tailwind v3 preset and v4 theme mapping to the same tokens. Generated. |
-| `react/` | Typed React 18+ components (no dependencies), meant to be copied into an app. |
+| `react/` | Typed React 18+ components (no dependencies), meant to be copied into an app. `react/icons.tsx` is generated from `icons/`. |
 | `examples/app.html` | A full list page in plain HTML. |
 | `examples/react/DetailPage.tsx` | A detail page composed from the React components. |
+| `examples/brewhunt.html` | A public catalogue page in comfortable density (field test on another app). |
 | `icons/`, `logos/` | Stroke icons on a 16px grid; Holdout's logo as an example. |
 | `docs/` | Principles, component catalogue, page patterns, screenshots. |
 | `scripts/build.mjs` | Regenerates the generated files (`node scripts/build.mjs`, no dependencies). |
@@ -61,4 +62,7 @@ import { AppRoot, Card, StatusGlyph, RatioBar, Button } from './omakase/react';
 
 Light canvas, colour at the corners, content on white. Drawn glyphs and ratio bars, never pills. One accent. Colour lives in small marks. Centred pop-ups, never side sheets. Glass only for chrome. Not grey. Plain, verb-first copy. Full version: [`docs/principles.md`](docs/principles.md).
 
+Light and dark themes, dense and comfortable sizes:
+
 ![Detail page](docs/screenshots/detail-page.png)
+![Catalogue page, comfortable, dark](docs/screenshots/catalogue-page-dark.png)

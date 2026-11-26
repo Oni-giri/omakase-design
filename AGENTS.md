@@ -14,6 +14,8 @@ Look at `docs/screenshots/` first to see the target, then read this file. `docs/
 | Tailwind v4 | `@import "tailwindcss"; @import "./omakase/css/omakase.css"; @import "./omakase/tokens/tailwind-v4.css";` |
 | npm | `npm i github:Oni-giri/omakase-design`, then import `omakase-design/css` (and `omakase-design/tailwind` for the v3 preset). |
 
+**Theme and density.** Light is the default. Put `data-theme="dark"` (or `"auto"` to follow the OS) on `<html>`; in React use `<AppRoot theme="dark">`. Tools used all day stay dense (the default); consumer-facing or public pages add `om-comfy` next to `om-app` (`<AppRoot density="comfortable">`): 15px text, roomier rows. Never hard-code colours, so both themes keep working.
+
 `css/omakase.css` already contains the fonts (Inter, JetBrains Mono via Google Fonts), the tokens and every component. It is generated: edit `tokens/tokens.json` or `css/components.css`, then run `node scripts/build.mjs`.
 
 ## 2. Never
@@ -29,6 +31,8 @@ Look at `docs/screenshots/` first to see the target, then read this file. `docs/
 - **No coloured card backgrounds, no left-border accent stripes, no emoji, no icons inside buttons unless they carry meaning.**
 - **No raw values**: never hard-code hex colours, radii or shadows. Use `var(--token)` or the Tailwind preset names.
 - **Do not hide essential information in tooltips.**
+- **Labels never differ by colour alone.** Each label kind gets a colour and a bar shape (`solid`, `split`, `dots`, `hollow`, `short`). At most 8 label kinds per app; beyond that, show plain text.
+- **No icons as `<img>`.** Use the inline icons (`react/icons.tsx`, or the SVG markup from `icons/`): they use `currentColor`, so they follow the text colour in both themes.
 
 ## 3. "I need…" → use
 
@@ -56,6 +60,12 @@ Look at `docs/screenshots/` first to see the target, then read this file. `docs/
 | actions on selected rows | `BulkBar` (white, floating) | a dark bar, or a toolbar that appears above the table |
 | quick navigation | `CommandPalette` on ⌘K | a mega menu |
 | loading | `Skeleton` lines | shimmer sweeps |
+| an app, package or project icon you don't have | `Tile` (monogram with a colour strip) | a random gradient avatar |
+| an install command or snippet | `CodeBlock` (with Copy) | a dark terminal block |
+| a trend | `Sparkline` + the number in text | a full chart for one number |
+| a public site header | `TopBar` + `Container`, no sidebar | a dark navbar |
+| long text (README, docs) | `om-prose` inside a `Card` | raw unstyled HTML |
+| a big search | `SearchField` | a search inside a coloured hero |
 
 ## 4. Layout
 
@@ -63,6 +73,7 @@ Look at `docs/screenshots/` first to see the target, then read this file. `docs/
 - Sidebar: brand, main pages, projects (8px colour squares), saved views, then workspace settings pushed to the bottom (`NavGroup end`). Only alerts get a filled count bubble.
 - Content is always on white `Card`s with `--shadow-card`, gap 12 to 22px, on the bloomed canvas.
 - Page recipes (list, detail, settings, dashboard, phone) are in `docs/patterns.md`. Follow them before inventing a layout.
+- Public pages (a store, docs, a landing): `TopBar` + `Container` (1160px), comfortable density, a two-column layout with a 360px side column for install/stats/details. See `examples/brewhunt.html`.
 - Mobile: one column, 16px cards, actions docked at the bottom in a glass bar (`om-dock`), 44px touch targets.
 
 ## 5. Words
@@ -91,6 +102,7 @@ Run `node scripts/check.mjs src` (from an installed copy: `node omakase/scripts/
 5. Counts and progress use ratio bars with plain-text numbers.
 6. Copy is sentence case, verb-first, says what happens.
 7. Compare your screen with `docs/screenshots/`: same calm density, white cards on the bloomed canvas.
+8. Switch `data-theme` to `dark` and look again: nothing should disappear (icons, borders, marks).
 
 ## 8. Extending
 

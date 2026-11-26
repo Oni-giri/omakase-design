@@ -7,3 +7,4 @@ export * from './components/Layout';
 export * from './components/Navigation';
 export * from './components/Forms';
 export * from './components/Feedback';
+export * from './icons';

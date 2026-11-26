@@ -2,7 +2,7 @@
 
 Every component exists as CSS classes (prefix `om-`, in `css/omakase.css`) and, except the phone pieces, as a typed React component in `react/`. Previews: `docs/screenshots/`, `examples/app.html`, `examples/react/DetailPage.tsx`.
 
-Also available, new in the repo: `AppRoot`, `Shell`, `Brand`, `NavGroup`, `NavItem`, `PageHeader`, `Breadcrumb`, `Panel`, `Prop`, `StatTile`, `CommandPalette`, `Checkbox`, `Menu`, `BulkBar`, `BulkAction`, `EmptyState`, `Skeleton`, `Kbd`.
+Also available: `TopBar`, `Container`, `Tile`, `CodeBlock`, `Sparkline`, `SearchField` (sections at the end), the icon components, and `AppRoot`, `Shell`, `Brand`, `NavGroup`, `NavItem`, `PageHeader`, `Breadcrumb`, `Panel`, `Prop`, `StatTile`, `CommandPalette`, `Checkbox`, `Menu`, `BulkBar`, `BulkAction`, `EmptyState`, `Skeleton`, `Kbd`.
 
 ## StatusGlyph
 
@@ -351,3 +351,51 @@ On phones, cards get a 16px radius and actions move to a glass dock at the botto
 ```html
 <div class="om-dock"><button class="om-mbtn om-mbtn-ok">Accept</button></div>
 ```
+
+## Mark shapes
+
+Every label kind has a bar shape as well as a colour, so labels can be told apart without colour. Built-in: bug solid, feature split, perf dots, security short, chore hollow. Custom labels: pass a colour and a shape. At most 8 label kinds per app.
+
+```tsx
+<Mark color="var(--project-pink)" shape="dots">design</Mark>
+```
+
+```html
+<span class="om-mark om-mk-dots" style="--m:var(--project-pink)">design</span>
+```
+
+## Icons
+
+Stroke icons on a 16px grid that use `currentColor`, so they follow the text colour in both themes. React: `IconIssues`, `IconBoard`, `IconMilestone`, `IconAccess`, `IconPipeline`, `IconSearch`, `IconFilter`, `IconLock`, `IconShieldCheck`, `IconRoleAuthor`, `IconRoleImplementer`, `IconRoleReviewer` (generated from `icons/` by the build). HTML: paste the SVG markup inline with `class="om-ic"`; never use `<img>`.
+
+## Tile
+
+A monogram standing in for an app, package or project icon: two letters in mono on white, with a colour strip at the bottom.
+
+```tsx
+<Tile text="rg" color="var(--project-sky)" large />
+```
+
+```html
+<span class="om-tile om-tile-lg" style="--t:var(--project-sky)" aria-hidden="true">rg</span>
+```
+
+## CodeBlock
+
+A one-line command on `surface-sunken` with a Copy button. Light in the light theme: never a black terminal block.
+
+```tsx
+<CodeBlock code="brew install ripgrep" />
+```
+
+## Sparkline
+
+A thin accent line with the last point marked, always next to the number in text.
+
+```tsx
+<span className="om-tline"><Sparkline values={[41, 44, 47, 52, 58, 61]} label="Installs, last 12 weeks" />182,430</span>
+```
+
+## SearchField, TopBar, Container, Prose
+
+Pieces for public pages: a 52px search field (`om-search`), a glass top bar (`om-topbar` with `om-toplink` links), a 1160px centred column (`om-container`), and `om-prose` for rendered READMEs and docs (17px headings, 15px text, light code blocks). See `examples/brewhunt.html`.
