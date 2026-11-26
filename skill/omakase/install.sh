@@ -25,6 +25,7 @@ if [ -f package.json ] && grep -q '"react"' package.json; then
   STACK="react"
 else
   STACK="html"
+  rm -rf "$TARGET/examples/react"   # its TSX would break non-React builds
 fi
 TW="none"
 if [ -f package.json ] && grep -q '"tailwindcss"' package.json; then
