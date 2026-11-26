@@ -22,7 +22,7 @@ Look at `docs/screenshots/` first to see the target, then read this file. `docs/
 - **No count pills**: show proportions with a `RatioBar` and the numbers in plain text ("7 of 9", "5 public + 8 sealed").
 - **No grey look**: no grey tab strips, grey selected tabs, grey toolbars or grey page backgrounds. Strips are white; hover is `accent-wash` (faint blue).
 - **No side sheets or drawers.** Every pop-up is a centered `Modal` (or the ⌘K palette near the top).
-- **No dark surfaces** except the small floating toast and the bulk-action bar. No dark sidebars, headers, cards or hero sections.
+- **No dark surfaces at all**: no dark sidebars, headers, cards, hero sections, toasts or floating bars. Floating bars (toast, bulk actions) are white, lifted by `--shadow-toast`.
 - **No texture**: no grain, noise, dot grids, line grids, topographic patterns. The only background decoration is the four corner blooms (`om-canvas`).
 - **One accent**: ultramarine `--accent` for the main action, focus, selection and progress. Do not introduce purple, orange-brown or extra brand colours. Green `--success` is only for the final Accept/approve.
 - **No gradients** other than the corner blooms and the sealed hatch already defined.
@@ -53,7 +53,7 @@ Look at `docs/screenshots/` first to see the target, then read this file. `docs/
 | a long job | `RunSteps` with the cleanup step at the end | a lone spinner |
 | hidden or not-allowed content | `Redaction` + a line saying what is hidden | blurring |
 | a feed of events | `ActivityItem` rows in a `Card flush` | a timeline with avatars |
-| actions on selected rows | `BulkBar` | a toolbar that appears above the table |
+| actions on selected rows | `BulkBar` (white, floating) | a dark bar, or a toolbar that appears above the table |
 | quick navigation | `CommandPalette` on ⌘K | a mega menu |
 | loading | `Skeleton` lines | shimmer sweeps |
 
@@ -86,7 +86,7 @@ Run `node scripts/check.mjs src` (from an installed copy: `node omakase/scripts/
 
 1. No element looks like a pill/badge/tag. Search your code for `rounded-full`, `badge`, `chip`, `pill`, `tag`.
 2. Exactly one primary (ultramarine) button per view.
-3. No grey strip or grey selected state; no side sheet; no dark block besides toast/bulk bar.
+3. No grey strip or grey selected state; no side sheet; no dark block anywhere.
 4. Every colour, radius and shadow comes from a token.
 5. Counts and progress use ratio bars with plain-text numbers.
 6. Copy is sentence case, verb-first, says what happens.

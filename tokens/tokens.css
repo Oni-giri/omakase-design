@@ -50,8 +50,8 @@
   --success: #15803D;
   --danger-tint: #FDF3F2;
   --danger-line: #F3C9C5;
-  --toast: #18181B;
-  --toast-link: #93C5FD;
+  --toast: #FFFFFF;
+  --toast-link: #2A48E8;
   --redaction: #E4E4EA;
   --redaction-light: #EDEDF1;
   --space-1: 4px;
@@ -78,7 +78,7 @@
   --shadow-card: 0 1px 2px rgba(15,23,42,0.04), 0 10px 28px -14px rgba(15,23,42,0.14);
   --shadow-menu: 0 18px 40px -16px rgba(15,23,42,0.35), 0 0 0 1px rgba(15,23,42,0.07);
   --shadow-modal: 0 24px 64px rgba(24,24,27,0.22);
-  --shadow-toast: 0 12px 32px rgba(24,24,27,0.24);
+  --shadow-toast: 0 14px 36px -10px rgba(15,23,42,0.28), 0 0 0 1px rgba(15,23,42,0.07);
   --shadow-ring: 0 0 0 1px #E4E4E9;
   --blur-glass: 16px;
   --font-sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;

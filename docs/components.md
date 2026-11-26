@@ -235,7 +235,7 @@ The main list: 52px rows inside a card, whole row clickable, checkbox for bulk s
 
 - Order inside the first cell: priority glyph, mono ID, title (500), up to two marks.
 - Status as a StatusGlyph, tests as a RatioBar, round as plain text (red at the cap).
-- Selected rows get `om-row-sel` (blue wash) and a dark bulk-action bar floats at the bottom of the screen.
+- Selected rows get `om-row-sel` (blue wash) and a white bulk-action bar floats at the bottom of the screen.
 - Use `tabular-nums` for every numeric column.
 
 ```tsx
@@ -263,11 +263,11 @@ Centered dialog, 560px wide, 16px radius, over a 38% dark scrim. Never a side sh
 
 ## Toast
 
-A small dark bar at the bottom centre that confirms an action: pending with a spinner, then done with Undo.
+A small white floating bar at the bottom centre that confirms an action: pending with a spinner, then done with Undo.
 
-- `om-toast`; action buttons inside use `om-toast-act` (light blue).
-- The bulk-action bar uses the same dark surface and position.
-- These are the only dark surfaces in the system: keep them small and floating.
+- `om-toast`; action buttons inside use `om-toast-act` (ultramarine).
+- The bulk-action bar uses the same white floating surface and position.
+- Never make them dark: the system has no dark surfaces.
 
 ```tsx
 <Toast state="done" action={{ label: "Undo", onClick: undo }}>HLD-31 approved.</Toast>

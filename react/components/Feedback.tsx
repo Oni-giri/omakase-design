@@ -38,13 +38,13 @@ export function Toast({ state, children, action }: { state: 'pending' | 'done' |
   );
 }
 
-/** Dark floating bar for actions on selected rows. */
+/** White floating bar for actions on selected rows. */
 export function BulkBar({ count, onClear, children }: { count: number; onClear: () => void; children: React.ReactNode }) {
   if (count === 0) return null;
   return (
     <div className="om-bulk" role="toolbar" aria-label="Bulk actions">
-      <span style={{ fontWeight: 600, marginRight: 8 }}>{count} selected</span>
-      <span aria-hidden="true" style={{ width: 1, height: 18, background: 'rgba(255,255,255,.18)', marginRight: 4 }} />
+      <span className="om-bulk-n">{count} selected</span>
+      <span aria-hidden="true" className="om-bulk-sep" />
       {children}
       <button type="button" className="om-bulk-b" aria-label="Clear selection" onClick={onClear}>×</button>
     </div>

@@ -88,7 +88,7 @@ module.exports = {
         "om-card": "0 1px 2px rgba(15,23,42,0.04), 0 10px 28px -14px rgba(15,23,42,0.14)",
         "om-menu": "0 18px 40px -16px rgba(15,23,42,0.35), 0 0 0 1px rgba(15,23,42,0.07)",
         "om-modal": "0 24px 64px rgba(24,24,27,0.22)",
-        "om-toast": "0 12px 32px rgba(24,24,27,0.24)",
+        "om-toast": "0 14px 36px -10px rgba(15,23,42,0.28), 0 0 0 1px rgba(15,23,42,0.07)",
         "om-ring": "0 0 0 1px #E4E4E9"
       },
       "fontFamily": {

@@ -23,7 +23,7 @@
 - Data: `ratio-pass`, `ratio-fail`, `ratio-sealed` hatched with `ratio-sealed-light`, on `ratio-track`.
 - Labels: `label-bug`, `label-feature`, `label-perf`, `label-security`; chore uses `mark-advisory`.
 - Projects get a bright 8px square: `project-sky`, `project-pink`, `project-amber`.
-- The only dark surface is `toast` (toasts and the bulk-action bar), always small and floating.
+- There are no dark surfaces. Toasts and the bulk-action bar are white (`toast`) and float on `shadow-toast`.
 
 ## Type
 
